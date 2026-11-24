@@ -4,6 +4,8 @@ A personal savings and stock-portfolio tracker that runs on your own machine.
 I built it in 2025–2026 with AI coding agents (Cursor Agent, then Claude) to
 learn first-hand how to run a team that builds software this way.
 
+![Savings Master running on demo data](docs/screenshot.png)
+
 ## What it does
 
 - Splits monthly savings between ETFs and a savings account, with 20-year
@@ -14,6 +16,16 @@ learn first-hand how to run a team that builds software this way.
   price × USD→EUR rate (European Central Bank rates via Frankfurter).
 - Keeps all data in a local SQLite file. The backend only accepts
   connections from this computer.
+
+The portfolio, with daily closes and forward dividend yields. PG's close is a
+day behind the others, so it is flagged:
+
+![Stock portfolio on demo data](docs/screenshot-stocks.png)
+
+Savings entries. Stock entries are made from portfolio quantity changes,
+including sales:
+
+![Savings entries on demo data](docs/screenshot-savings.png)
 
 ## Stack
 
