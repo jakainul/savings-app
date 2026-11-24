@@ -17,6 +17,16 @@ learn first-hand how to run a team that builds software this way.
 - Keeps all data in a local SQLite file. The backend only accepts
   connections from this computer.
 
+The portfolio, with daily closes and forward dividend yields. PG's close is a
+day behind the others, so it is flagged:
+
+![Stock portfolio on demo data](docs/screenshot-stocks.png)
+
+Savings entries. Stock entries are made from portfolio quantity changes,
+including sales:
+
+![Savings entries on demo data](docs/screenshot-savings.png)
+
 ## Stack
 
 React 19 + TypeScript (Vite) · Node.js 22 + Express 5 · SQLite (better-sqlite3) ·
