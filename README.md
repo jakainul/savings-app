@@ -4,6 +4,8 @@ A personal savings and stock-portfolio tracker that runs on your own machine.
 I built it in 2025–2026 with AI coding agents (Cursor Agent, then Claude) to
 learn first-hand how to run a team that builds software this way.
 
+![Savings Master running on demo data](docs/screenshot.png)
+
 ## What it does
 
 - Splits monthly savings between ETFs and a savings account, with 20-year
