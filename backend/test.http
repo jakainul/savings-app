@@ -1,0 +1,17 @@
+### Health
+GET http://localhost:5001/health
+
+### Get Watchlist
+GET http://localhost:5001/api/stocks/watchlist
+
+### Add a ticker
+POST http://localhost:5001/api/stocks/watchlist
+Content-Type: application/json
+
+{"ticker": "MSFT"}
+
+### Get stored quotes for watchlist
+GET http://localhost:5001/api/stocks/quotes
+
+### Enqueue manual refresh
+POST http://localhost:5001/api/stocks/refresh/MSFT
