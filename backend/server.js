@@ -6,7 +6,7 @@ if (!process.env.EULERPOOL_API_KEY) {
   console.warn('⚠️  Add it to backend/.env (see .env.example). Get a free key at https://eulerpool.com/developers');
 }
 const express = require('express');
-const { db, initDatabase } = require('./database');
+const { db, dbPath, initDatabase } = require('./database');
 const { startSchedulers, STOCK_REFRESH_HOURS } = require('./services/scheduler');
 const { getStockSavingsEntries } = require('./services/stockSavings');
 const { getUsdEurRate } = require('./services/fxRates');
@@ -37,7 +37,7 @@ app.use(express.json());
 // Initialize database (synchronous with better-sqlite3)
 try {
   initDatabase();
-  console.log('Database ready for connections');
+  console.log(`Database ready: ${require('path').basename(dbPath)}`);
 } catch (err) {
   console.error('FATAL: Failed to initialize database:', err);
   console.error('Server cannot start without a working database connection.');
