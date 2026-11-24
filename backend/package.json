@@ -9,6 +9,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node --watch server.js",
+    "test": "node --test test/*.test.js",
     "map-isins": "node scripts/map-isins.js",
     "check-quota": "node scripts/check-quota.js",
     "probe-eulerpool": "node scripts/probe-eulerpool.js",
