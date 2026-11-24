@@ -1,8 +1,14 @@
 const path = require('path');
 const Database = require('better-sqlite3');
 
-// Open (or create) the database file next to this module
-const dbPath = path.join(__dirname, 'budget.db');
+// Open (or create) the database file next to this module. DB_PATH picks another
+// file (relative paths start from this folder): demo.db for demo mode, or
+// :memory: for tests, so neither ever touches your real data in budget.db.
+const dbPath = !process.env.DB_PATH
+  ? path.join(__dirname, 'budget.db')
+  : process.env.DB_PATH === ':memory:'
+    ? ':memory:'
+    : path.resolve(__dirname, process.env.DB_PATH);
 const db = new Database(dbPath);
 
 // The previous sqlite3 driver ran with foreign key enforcement off.
@@ -195,4 +201,4 @@ const initDatabase = () => {
   console.log('Database initialized successfully (including portfolio tables)');
 };
 
-module.exports = { db, initDatabase };
+module.exports = { db, dbPath, initDatabase };
