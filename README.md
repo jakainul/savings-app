@@ -3,6 +3,7 @@
 A personal savings and stock-portfolio tracker that runs on your own machine.
 I built it in 2025–2026 with AI coding agents (Cursor Agent, then Claude) to
 learn first-hand how to run a team that builds software this way.
+[How it was built →](HOW_IT_WAS_BUILT.md)
 
 ![Savings Master running on demo data](docs/screenshot.png)
 
@@ -48,7 +49,7 @@ tests. I review, run it locally and merge. Every change follows the same loop:
    a `schema_migrations` table and run once.
 
 More detail, including what changed between the two rounds of work:
-[docs/how-it-was-built.md](docs/how-it-was-built.md)
+[HOW_IT_WAS_BUILT.md](HOW_IT_WAS_BUILT.md)
 
 ## Problems worth a look
 
